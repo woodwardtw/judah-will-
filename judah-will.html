@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="menu">
+	<h2 class="site-title">The Judah Will</h2>
+	<div class="tag-line">An Annotation Project by the 2017 Digital History Class at VCU</div>
+	<div class="nav">
+		<div class="button" id="credits" data-page="about">About</div>
+		<div class="button" id="credits" data-page="viewingthewill">The Document</div>
+		<div class="button" id="people" data-page="people">People</div>
+		<div class="button" id="afam" data-page="african-americans">African Americans</div>
+		<div class="button" id="places" data-page="judaism">Judaism</div>
+		<div class="button" id="places" data-page="places">Places</div>
+		<div class="button" id="places" data-page="word-cloud">Text</div>
+		<div class="button" id="credits" data-page="authors">Credits</div>
+	</div>
+</div>
+<div class="extra-info">
+  <div class="directions" id="directions-people">
+  Click on a person's name in the will to display additional information about that individual below. Their name will be highlighted wherever it is mentioned in the will. All names will be underlined.
+  </div>
+  <div id="personDetails">
+  		<div class="directions">Interact by clicking the buttons above or by clicking on the names in the document.</div>
+  </div>
+  <div id="hiddenDetails">
+  </div>
+</div>
+
+<div class="plain" id="theWill">
+  <p>
+    In the name of God Creator of Heaven & of ~ Earth Amen. אָמֵן - I, <span class="person" data-person="isaac-h-judah">Isaac H. Judah</span>, of the City of Richmond, and State of Virginia, seriously considering the uncertainty of human life, and my
+    mind being impressed, as to the great necessity of making provisions of my worldly matters, in the event of a termination of my terrest[r]ial existence, do make and ordain my last will & testament, in manner and form following, which I enjoin and
+    require to be fulfilled and executed in every respect according to my intentions and wishes in manner & form following, that is to say -
+  </p>
+  <p id="p2">
+    1st / It is my will and desire to have the usual השכבה (Hashcuba), and also a suitable tomb stone placed over my body, that I may remain undisturbed.
+  </p>
+  <p id="p3">
+    2nd / I give and bequeath my slave <span class="person" data-person="maria">Maria</span> to <span class="person" data-person="david-judah">David Judah</span>, one of my executors, hereinafter named, to be held by him in trust for the following uses
+    and purposes, viz. that said <span class="person" data-person="david-judah">David Judah</span> shall hire out the said slave <span class="person" data-person="maria">Maria</span> for fifteen years, ever considering the happiness and comfort of said
+    slave, in selecting the persons to whom she is to be hired and using his own discretion and good feelings on the subject. That all sums of money received by him for the hire of said slave, shall be carefully deposited in Bank, or placed out on interest
+    from time to time, with indisputable security, and at the expiration of said fifteen years, or so soon thereafter as the same shall be required by her the said <span class="person" data-person="maria">Maria</span> in writing attested by two or more
+    respectable witnesses, it is my will and desire, and I do hereby direct my executors hereinafter named, to manumit & set free the said ^slave <span class="person" data-person="maria">Maria</span> and such children as she may have at the time by deed
+    or deeds duly executed and recorded according to law and that the money which may have arisen from the hiring of said slave with whatever interest may have accumulated thereon shall be paid to the said <span class="person" data-person="maria">Maria</span>,
+    if alive, and if not to her children then living as soon as she or they may be made free as aforesaid.
+  </p>
+  <p id="p4">
+    3d/ I give and bequeath my slave <span class="person" data-person="betsey">Betsey</span> to <span class="person" data-person="david-judah">David Judah</span>, one of my executors hereinafter named, to be held by him in trust for the following uses
+    and purposes, viz. that the said <span class="person" data-person="david-judah">David Judah</span> shall hire out said slave <span class="person" data-person="betsey">Betsey</span> for fifteen years ever considering the comfort and happiness of said
+    slave in selecting the persons to whom she is to be hired and using his own discretion & good feeling on the subject. That all sums of money received by him for hire of said slaves shall be carefully deposited by said <span class="person" data-person="david-judah">David Judah</span>    in Bank, or placed out on interest from time to time, with indisputable security, and at the expiration of said fifteen years or so soon thereafter as the same shall be required by her the said <span class="person" data-person="betsey">Betsey</span> in writing, attested by two or more respectful
+    witnesses, it is my will and desire, and I do hereby direct my executors hereinafter named to manumit & set free the said ^slave <span class="person" data-person="betsey">Betsey</span> and such children as she may have at the time by deed or deeds
+    duly executed and recorded according to law and that the money which may have arisen from the hiring of said slave with whatever interest may have accumulated thereon shall be paid to said <span class="person" data-person="betsey">Betsey</span>, if
+    alive, and if not, to her children then living, as soon as she or they may be made free as aforesaid.
+  </p>
+
+  <p>
+    4th - It is my will and desire that a suitable Tomb stone be placed over the remains of my honoured <span class="person" data-person="abigail-seixas-judah">mother</span>, the late Mrs. <span class="person" data-person="abigail-judah">Abigail Judah</span>… at the expense of my estate.
+  </p>
+  <p>
+    5th- I give and bequeath to <span class="person" data-person="philip-norborne-wythe">Philip Norborne Wythe</span> & <span class="person" data-person="benjamin-wythe">Benjamin Wythe</span>, free mulatto boys & brothers whom I brought
+    up, in consideration of their attachment & fidelity, and my natural regard for them, the following property, viz. to <span class="person" data-person="philip-norborne-wythe">Philip
+    Norborne</span> twenty five feet of ground on the <span class="place" data-place="">Brook road</span> fronting on that road and running back one hundred and twenty seven feet to a fifteen foot alley, adjoining <span class="person" data-person="simon-block">Simon Block</span>’s lot on the
+    south and bound ~ on the north by the lot hereinafter devised to his brother <span class="person" data-person="benjamin-wythe">Benjamin Wythe</span> - and I also bequeath to him said <span class="person" data-person="philip-norborne-wythe">Philip Norborne</span>    the sum of three hundred dollars to be paid to him by my executors, within five years according to the discretion of my executors, and the situation of my estate, to him, his heirs and assigns forever. To the said <span class="person" data-person="benjamin-wythe">Benjamin Wythe</span>    I give & bequeath twenty five feet of ground at the intersection of <span class="place" data-place="">M [Duval] Street</span> and the <span class="place" data-place="">Brook road</span> ^in the city of Richmond, fronting twenty five feet on the <span class="place" data-place="">Brook ro[ad]</span>, running back one hundred & twenty seven feet to a fifteen foot alley and
+    bounded on the south by the lot herein devised to his brother <span class="person" data-person="philip-norborne-wythe">Philip Norborne</span>, and on the north by <span class="place" data-place="">M street</span>, and also the sum of five hundred dollars, to be paid him by my executors within
+    five years according to their discretion and the situation of my estate to him said Benjamin, his heirs and assigns forever.
+  </p>
+  <p>
+    6th/ I direct that the lot on which I now reside be laid off and divided into two parts by a line running from <span class="place" data-place="">L to M Street</span> so as to give a front of an equal number of feet to each part on said two streets, the eastern half of which, and on which is
+    the dwelling house now occupied by me. I give and bequeath to my executors hereinafter named, their heirs and assigns forever, to have and to hold the same in trust for the use, benefit and occupation of my niece <span class="person" data-person="abigail-de-pass">Abigail De Pass</span>    during her natural life, and after her death to some one or more of my brothers or sisters, or their descendants, as she the said <span class="person" data-person="abigail-de-pass">Abigail</span> may designate by her deed or will in writing, to them,
+    their heirs or assigns forever. I also give & bequeath to my said executors fifty feet of ground on <span class="place" data-place="">L street</span>, in the city of Richmond, being at a corner of a street laid off ^by me, denoted <span class="place" data-place="">Judah Street</span>; being thirty feet wide by the new fence, and
+    running back from <span class="place" data-place="">L street</span> one hundred and twenty four feet. Also fifty feet of ground fronting on <span class="place" data-place="">second street</span>, the corner above <span class="person" data-person="c-christian">C. Christian</span>'s' part of lot number in Williamson’s plan (not yet
+    recorded, which I require to be done, it being amongst my papers also the plan a survey of <span class="person" data-person="r-young">R. Young</span>’s of tenement number four, my residence) which said two last pieces or lots of ground, I devise to
+    my said executors, their heirs and assigns, to have and to hold the same for the use and benefit of my said niece <span class="person" data-person="abigail-de-pass">Abigail De Pass</span>, during her natural life, and after her death, to some one
+    or more of my brothers or sisters, or their descendants as she the said <span class="person" data-person="abigail-de-pass">Abigail</span> may designate by her deed or will in writing to them, their heirs, and assigns forever and I also give & bequeath
+    to my said executors my slave <span class="person" data-person="harry">Harry</span>, to be held by them in trust for the use & benefit of my said niece <span class="person" data-person="abigail-de-pass">Abigail De Pass</span>, in the same manner and
+    subject to the same limitation as the lots herein before devised for her use and benefit.
+  </p>
+  <p>
+    7th / I give & bequeath to my much esteemed friend & neighbour Capt <span class="person" data-person="john-goddin">John Goddin</span>, of the city of Richmond, the lot of ground on the <span class="place" data-place="">north side of Bacon Branch</span>, which I purchased from said
+    <span class="person" data-person="john-goddin">Goddin</span> and <span class="person" data-person="wife-john">wife</span>, and which is designated by the number two hundred and eighty eight to him said <span class="person" data-person="john-goddin">Goddin</span>    his heirs and assigns forever.
+  </p>
+  <p>
+    8/ [Written sideways in the margin] I give and bequeath ^ to my niece <span class="person" data-person="rachel-judah">Rachel</span> the daughter of my brother <span class="person" data-person="moses-judah">Moses H. Judah</span>, my lot at the corner
+    of <span class="place" data-place="">L. street and the Brook road</span> in the city of Richmond, containing a front of sixty feet on the Brook road and running back one hundred and twenty feet, to her and her heirs and assigns forever.
+  </p>
+  <p>
+    9th/ I give and bequeath to my brother <span class="person" data-person="moses-judah">Moses H. Judah</span>, one fourth of the square, which I purchased of <span class="person" data-person="samuel-coleman">Samuel Coleman</span>, beginning on <span class="place" data-place="">M street,
+    at Roper’s or Skipwith’s line</span>, and running on said street one hundred and sixty seven feet, or one half of the front, and including the Dutched roof - house thereon, to have and to hold the same to him the said <span class="person" data-person="moses-judah">Moses H. Judah</span>,
+    during his life, and after his death to the said <span class="person" data-person="rachel-judah">Rachel</span>, daughter of said <span class="person" data-person="moses-judah">Moses H. Judah</span>, her heirs & assigns forever.
+  </p>
+  <p>
+    10th/I give and bequeath to my nephew <span class="person" data-person="gershom-judah">Gershom</span> the son of my brother <span class="person" data-person="manuel-judah">Manuel Judah</span>, thirty feet of ground fronting on <span class="place" data-place="">L street</span> on the City
+    of Richmond, running back one hundred & twenty four feet and adjoining the fifty feet of ground herein devised in trust for the benefit of <span class="person" data-person="abigail-de-pass">Abigail De Pass</span> for life, to have and to hold the
+    same to him - said
+    <span class="person" data-person="gershom-judah">Gershom</span> his heirs and assigns forever.
+  </p>
+  <p>
+    11th/ I give and bequeath to my niece <span class="person" data-person="abigail-judah">Abigail Judah</span> ^the daughter of my brother <span class="person" data-person="manuel-judah">Manuel Judah</span> thirty feet of ground, fronting on <span class="place" data-place="">L street</span>
+    in the city of Richmond, running back one hundred and twenty four feet and adjoining the thirty feet herein devised to her brother <span class="person" data-person="gershom-judah">Gershom</span>, to her said <span class="person" data-person="abigail-judah">Abigail Judah</span>    her heirs and assigns forever. Also a negro girl <span class="person" data-person="aggy">Aggy</span> I give & bequeath to my said niece <span class="person" data-person="abigail-judah">Abigail</span> her heirs & assigns forever.
+  </p>
+  <p>
+    12th/<span class="place" data-place="">The half of the Garden lot</span>, or that part of it which is bounded on the east by the half of the same devised to my executors, in trust to the use & benefit of <span class="person" data-person="abigail-de-pass">Abigail De Pass</span> for life,
+    as herein before mentioned, and which is bounded by <span class="place" data-place="">Judah Street</span> on the West. I give & bequeath to all my nephews and nieces, their heirs & assigns forever, to be laid off in equal lots according to the number of my nephews and nieces and divided
+    by lot, each of them to have such lot as may be drawn against their several names on their arriving respectively to the age of twenty one years old, as some may be inclined to retain them and my nephews and nieces herein specifically mentioned by
+    name are not to be excluded.
+  </p>
+  <p>
+    13th/ I give and bequeath to my said niece <span class="person" data-person="abigail-de-pass">Abigail De Pass</span> fifty feet of ground of the same lot adjoining that devised to my executors, in trust for her use and benefit for life, as herein
+    before mentioned, fronting on <span class="place" data-place="">second street</span> in the city of Richmond, to the ten feet alley one hundred & twenty seven feet deep to her and her heirs and assigns forever.
+  </p>
+  <p>
+    14th/It is my will & desire that my faithful old slave <span class="person" data-person="toby">Toby</span> shall be maintained & clothed during his life by my executors, at the expense of my estate.
+  </p>
+  <p>
+    15th/ I give & bequeath to my aunts <span class="person" data-person="grace-nathan">Mrs. Grace Nathan</span> and Mrs. <span class="person" data-person="zipphorah-seixas">Zipporah Seixas</span>, both of the City of New York as having always ~~ retained
+    their kindness & care of me, fifty pounds, New York currency, or one hundred & twenty five dollars each, to paid out of my estate within five years, according to the situation of my estate, but if either or both of my said aunts should die before
+    the said money is paid them then it is my wish that the sum or sums of money intended for them shall be paid to my heirs.
+  </p>
+  <p>
+    16th/ It is my will and desire that all my just debts shall be paid as soon as possible by my executors, and to fulfill that intention I direct that my slaves <span class="person" data-person="henry">Henry</span> and <span class="person" data-person="daphney">Daphney</span>    and so much of my property not specifically bequeathed, be disposed of and sold by my executors, as shall be sufficient for the purpose.
+  </p>
+  <p>
+    17th I give and bequeath all the remainder and residue of my estate that has not already been devised and bequeathed, or that shall not be hereinafter devised and bequeathed, to the following named persons ̌ ̌, their heirs and assigns forever, viz. to
+    my sister <span class="person" data-person="sarah-de-pass">Sarah De Pass</span> one share or portion - to my sister <span class="person" data-person="grace-marks">Grace Marks</span> for her tender regard and love from a child two shares or portions,
+    to my sister
+    <span class="person" data-person="rebecca-seixas">Rebecca Seixas</span> one share or portion - to my brother <span class="person" data-person="manuel-judah">Manuel Judah</span> one share or portion - to my brother <span class="person" data-person="baruch-h-judah">Baruch H. Judah</span>    & <span class="person" data-person="manuel-judah">Manuel Judah</span> his son, & <span class="person" data-person="ryne-judah">Ryne Judah</span> his daughter, one share or portion to be equally divided between them - to my broth[er] <span class="person"
+      data-person="gershom-judah">Gershom Judah</span> & to my sister <span class="person" data-person="rachel-rehine">Rachel Rehine</span>, one share or portion to be equally divided between them - and the eighth and last portion of the same I give and
+    bequeath to my nephew and namesake <span class="person" data-person="isaac-marks">Isaac Marks</span>, the son of my sister <span class="person" data-person="grace-marks">Grace Marks</span> for him his heirs and assigns forever.
+  </p>
+  <p>
+    17th It is my further will & desire that if any of my heirs or legatees shall in any way whatsoever obstruct my wishes or enter in relation to the said Philip <span class="person" data-person="norborne-wythe">Norborne Wythe</span>, <span class="person"
+      data-person="benjamin-wythe">Benjamin Wythe</span>, and my slaves <span class="person" data-person="maria">Maria</span> & <span class="person" data-person="betsey">Betsey</span> as herein before expressed, I direct that all and every provision & legacy
+    herein contained shall be considered as revoked and utterly null and void, as to such person so obstructing my said wishes & his her or their legacies thus forfeited shall be equally divided and distributed amongst the rest of my heirs.
+  </p>
+  <p>
+    18th I do hereby nominate, constitute and appoint by [sic] brother <span class="person" data-person="manuel-judah">Manuel Judah</span>, of the county of Franklin, and my nephew <span class="person" data-person="david-judah">David Judah</span> of the
+    city of Richmond, executors of this my last will & testament, and I do direct that my said executors shall not be required to give security for the performance of their duties as my executors. Hereby revoking all former wills heretofore made by me
+    and declaring this to be my true last will & testament written on two sheets of paper. I have hereunto set my hand, and affix my seal, this 16th day of April 1827.
+  </p>
+  <p>
+    <span class="person" data-person="isaac-h-judah">I.H.Judah</span><br>
+    <br> Signed Sealed published and<br> declared as his last will & testament<br> by <span class="person" data-person="isaac-h-judah">Isaac H. Judah</span>, before us <br> <span class="person" data-person="herbert-a-clairborne">Herbert A Claiborne</span>
+    <Br> <span class="person" data-person="joseph-longest">Joseph Longest</span><br> <span class="person" data-person="samuel-foster">Samuel Foster</span><br>
+    <p>
+      At a Court of Hustings held for the city of Richmond, at the City Hall, on the twenty-sixth day of May 1827. <br> This last will and testament of <span class="person" data-person="isaac-h-judah">Isaac H. Judah</span> deceased, was proved by the
+      oaths of
+      <span class="person" data-person="herbert-a-clairborne">Herbert A. Clairborne</span>, <span class="person" data-person="joseph-longest">Joseph Longest</span> & <span class="person" data-person="samuel-foster">Samuel Foster</span> witnesses thereto
+      and ordered to be recorded and probate granted <span class="person" data-person="david-judah">David Judah</span>, one of the executors therein named, who made oath thereto and entered into & acknowledged a bond in the penalty of twenty thousand
+      dollars conditioned according to the Act of Assembly passed the 16th day of February 1825 without security (the will directing that none should be required of them.) liberty being reserved to the other executor in the said will named to join in
+      the said probate when he shall think fit.
+    </p>
+    <p>
+      Teste: Th. C. Howard, Clk.
+    </p>
+
+</div>	
+
+<script src="scripts.js" type="text/javascript" charset="utf-8" ></script>
+</body>
+</html>

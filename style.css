@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|La+Belle+Aurore');
+
+body {
+  margin: 0;
+  padding: 0;
+  height: calc(100vh - 10px)
+}
+
+#theWill {
+  max-height: 90vh;
+  overflow: scroll;
+  overflow: -moz-scrollbars-vertical;
+  transition: all 0.5s ease;
+}
+
+#theWill span.person {
+  border-bottom: 2px dashed red;
+}
+
+#theWill p {
+  margin-top: 20px;
+}
+
+.plain {
+  width: 40%;
+  /* margin: auto;*/
+  padding: 20px;
+  font-family: times;
+  font-size: 1.7em;
+  background-color: #f9f9ef;
+  color: #424242;
+  line-height: 1.1em;
+}
+
+.extra-info {
+  width: 45%;
+  left: 45%;
+  display: block;
+  position: absolute;
+  padding-top: 15px;
+}
+
+.directions {
+  font-size: 2em;
+}
+
+#directions-people{
+  display: none;
+}
+
+.personDetails {
+  font-size: 1.2em;
+}
+
+.extra-info h2 {
+  font-size: 3em;
+  font-family: 'La Belle Aurore', cursive;
+}
+
+.extra-info p {
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+.extra-info a {
+  color: #424242;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  padding: 20px 0 8px 0;
+  background-color: #424242;
+  margin: 0;
+  color: #f9f9ef;    
+}
+
+.site-title {
+    font-family: 'La Belle Aurore', cursive;
+    line-height: 1em;
+    font-size: 3em;
+    margin: 0 0 0 30px;
+    display: inline-block;
+}
+
+.tag-line {
+  margin-left: 160px;
+  font-size: 1em;
+  display: inline-block;
+  display: none;
+}
+
+.nav {
+  display: inline-flex;
+  margin-left: 60px;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #f9f9ef;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 9px;
+}
+
+.button:hover {
+  background-color: #f9f9ef;
+  color: #424242;
+}
+
+/*PEOPLE*/
+.person {
+  padding-bottom: 0;
+  cursor: pointer;
+}
+
+.isaac-h-judah {
+  background-color: lightblue;
+}
+
+.david-judah {
+  background-color: lightgreen;
+}
+
+.maria {
+  background-color: pink
+}
+
+.betsey {
+  background-color: yellow;
+}
+
+.abigail-de-pass {
+  background-color: skyblue;
+}
+
+.philip-norborne-wythe {
+  background-color: lightgray;
+}
+
+.benjamin-wythe {
+  background-color: orange;
+}
+
+.harry {
+  background-color: springgreen;
+}
+
+.john-goddin {
+  background-color: salmon;
+}
+
+.moses-judah {
+  background-color: goldenrod;
+}
+
+.rachel-judah {
+  background-color: cyan;
+}
+
+.manuel-judah {
+  background-color: orange;
+}
+
+.gershom-judah {
+  background-color: palegreen;
+}
+
+.abigail-judah {
+  background-color: peachpuff;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+/*Family Tree*/
+* {margin: 0; padding: 0;}
+
+    .tree ul {
+      padding-top: 20px; position: relative;
+  
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    .tree li {
+      float: left; text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 20px 5px 0 5px;
+  
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    /*We will use ::before and ::after to draw the connectors*/
+
+    .tree li::before, .tree li::after{
+      content: '';
+      position: absolute; top: 0; right: 50%;
+      border-top: 1px solid #ccc;
+      width: 50%; height: 45px;
+      z-index: -1;
+    }
+    .tree li::after{
+      right: auto; left: 50%;
+      border-left: 1px solid #ccc;
+    }
+
+    /*We need to remove left-right connectors from elements without 
+    any siblings*/
+    .tree li:only-child::after, .tree li:only-child::before {
+      display: none;
+    }
+
+    /*Remove space from the top of single children*/
+    .tree li:only-child{ padding-top: 0;}
+
+    /*Remove left connector from first child and 
+    right connector from last child*/
+    .tree li:first-child::before, .tree li:last-child::after{
+      border: 0 none;
+    }
+    /*Adding back the vertical connector to the last nodes*/
+    .tree li:last-child::before{
+      border-right: 1px solid #ccc;
+      border-radius: 0 5px 0 0;
+      
+      -webkit-transform: translateX(1px);
+      -moz-transform: translateX(1px);
+      transform: translateX(1px);
+      
+      -webkit-border-radius: 0 5px 0 0;
+      -moz-border-radius: 0 5px 0 0;
+      border-radius: 0 5px 0 0;
+    }
+    .tree li:first-child::after{
+      border-radius: 5px 0 0 0;
+      -webkit-border-radius: 5px 0 0 0;
+      -moz-border-radius: 5px 0 0 0;
+    }
+
+    /*Time to add downward connectors from parents*/
+    .tree ul ul::before{
+      content: '';
+      position: absolute; top: -16px; left: 50%;
+      border-left: 1px solid #ccc;
+      width: 0; height: 37px;
+      z-index: -1;
+    }
+
+    .tree li a{
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #666;
+      font-family: arial, verdana, tahoma;
+      font-size: 11px;
+      display: inline-block;
+      background: white;
+      width:150px;
+      height:40px;
+  
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+  
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+    .tree li a+a {
+      margin-left: 20px;
+      position: relative;
+    }
+    .tree li a+a::before {
+      content: '';
+      position: absolute;
+      border-top: 1px solid #ccc;
+      top: 50%; left: -21px; 
+      width: 20px;
+    }
+
+    /*Time for some hover effects*/
+    /*We will apply the hover effect the the lineage of the element also*/
+    .tree li a:hover, .tree li a:hover~ul li a {
+      background: #95de9f; color: #000; border: 1px solid #94a0b4;
+    }
+    /*Connector styles on hover*/
+    .tree li a:hover~ul li::after, 
+    .tree li a:hover~ul li::before, 
+    .tree li a:hover~ul::before, 
+    .tree li a:hover~ul ul::before
+    {
+      border-color: #94a0b4;
+    }
+
+.spouse {
+  margin-left: 190px;
+  margin-top: 10px;
+}
