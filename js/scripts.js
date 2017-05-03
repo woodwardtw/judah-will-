@@ -2,6 +2,7 @@
 const _people = Array.from(document.querySelectorAll('.person'));
 
 //via http://stackoverflow.com/a/4589863/3390935
+//MAKE THE PEOPLE CLICKABLE
 document.body.onclick = function(e) {
   e = window.event ? event.srcElement : e.target;
   if (e.className && e.className.indexOf("person") != -1) {
@@ -22,6 +23,7 @@ document.body.onclick = function(e) {
 };
 
 
+//UNDERLINE THE PEOPLE
 function underPeople() {
   for (var i = 0; i < _people.length; i++) {
     border = _people[i].style.borderBottom;
@@ -36,15 +38,18 @@ function underPeople() {
   }
 }
 
+//HIGHLIGHT THE PERSON
 function hlPerson(person) {
   for (var i = 0; i < _people.length; i++) {
     var thePerson = _people[i].dataset.person;
     if (thePerson == person) {
       _people[i].classList.add(thePerson);
+        window.location.hash = thePerson;
     }
   }
 }
 
+//LOAD THE DETAILS OF THE PERSON FROM WP API MATCH WITH URL SLUG
 function showDetails(person) {
    person = person+'-details';
   var details = document.getElementsByClassName(person)[0].innerHTML;
@@ -62,6 +67,8 @@ function setPages(theSlug) {
   window.location.hash = theSlug;
 }
 
+
+//MAKE ALL OF THE STUFF FROM THE WP JSON API
 $(document).ready(function() {
   var def = new jQuery.Deferred();
   $.ajax({
@@ -73,28 +80,43 @@ $(document).ready(function() {
         $.each(data, function(index, item) {
           $('#hiddenDetails').append('<div class="person-details hidden '+ item.slug + '-details"><div class="person-name"><h2>' + item.title.rendered + '</h2></div><div class="full-details">' + item.content.rendered + '</div>');
         }); //each
+        setPages(urlHash());//sets page display if hash in URL
+        hlPerson(urlHash());
+        modalFamily();
+
       } //success
   }); //ajax  
 }); //ready
 
 
- setTimeout(function(){ urlHash(); }, 1500);
 
-
+//GET THE HASH VARIABLE FROM URL 
 function urlHash(){
   if(window.location.hash) {
 
       var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
-      console.log(hash);      
-      setPages(hash);
+        return hash;
       // hash found
   } else {
       // No hash found
+      return 'about';
   }
 }
 
 
+//FAMILY TREE MAGIC JUICE
+
+function modalFamily() {
+  var tree = document.getElementById('familyTree');
+
+  console.log(tree);
+}
+
+
 //discards
+
+//setTimeout(function(){ urlHash(); }, 1500); //hack which is no longer needed
+
 function plainJane() {
   var will = document.getElementById("theWill");
   var className = will.getAttribute("class");

@@ -5,9 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/panorama_viewer.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/jquery.panorama_viewer.min.js" type="text/javascript" charset="utf-8" ></script>
+  <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/jquery.modal.min.css" type="text/css" media="screen" />
+
 </head>
 <body>
 <div class="menu">
@@ -15,7 +16,7 @@
 	<div class="tag-line">An Annotation Project by the 2017 Digital History Class at VCU</div>
 	<div class="nav">
 		<div class="button" id="credits" data-page="about">About</div>
-		<div class="button" id="credits" data-page="viewingthewill">The Document</div>
+		<div class="button" id="document" data-page="viewingthewill">The Document</div>
 		<div class="button" id="family-tree" data-page="family-tree">Family Tree</div>
 		<div class="button" id="afam" data-page="african-americans">African Americans</div>
     <div class="button" id="women" data-page="women">Women</div>
@@ -64,7 +65,7 @@
   </p>
 
   <p>
-    4th - It is my will and desire that a suitable Tomb stone be placed over the remains of my honoured <span class="person" data-person="abigail-seixas-judah">mother</span>, the late Mrs. <span class="person" data-person="abigail-judah">Abigail Judah</span>… at the expense of my estate.
+    4th - It is my will and desire that a suitable Tomb stone be placed over the remains of my honoured <span class="person" data-person="abigail-seixas-judah">mother</span>, the late Mrs. <span class="person" data-person="abigail-seixas-judah"">Abigail Judah</span>… at the expense of my estate.
   </p>
   <p>
     5th- I give and bequeath to <span class="person" data-person="philip-norborne-wythe">Philip Norborne Wythe</span> & <span class="person" data-person="benjamin-wythe">Benjamin Wythe</span>, free mulatto boys & brothers whom I brought
@@ -90,23 +91,23 @@
     <span class="person" data-person="john-goddin">Goddin</span> and <span class="person" data-person="wife-john">wife</span>, and which is designated by the number two hundred and eighty eight to him said <span class="person" data-person="john-goddin">Goddin</span>    his heirs and assigns forever.
   </p>
   <p>
-    8/ [Written sideways in the margin] I give and bequeath ^ to my niece <span class="person" data-person="rachel-judah">Rachel</span> the daughter of my brother <span class="person" data-person="moses-judah">Moses H. Judah</span>, my lot at the corner
+    8/ [Written sideways in the margin] I give and bequeath ^ to my niece <span class="person" data-person="rachel-judah">Rachel</span> the daughter of my brother <span class="person" data-person="moses-h-judah">Moses H. Judah</span>, my lot at the corner
     of <span class="place" data-place="">L. street and the Brook road</span> in the city of Richmond, containing a front of sixty feet on the Brook road and running back one hundred and twenty feet, to her and her heirs and assigns forever.
   </p>
   <p>
-    9th/ I give and bequeath to my brother <span class="person" data-person="moses-judah">Moses H. Judah</span>, one fourth of the square, which I purchased of <span class="person" data-person="samuel-coleman">Samuel Coleman</span>, beginning on <span class="place" data-place="">M street,
-    at Roper’s or Skipwith’s line</span>, and running on said street one hundred and sixty seven feet, or one half of the front, and including the Dutched roof - house thereon, to have and to hold the same to him the said <span class="person" data-person="moses-judah">Moses H. Judah</span>,
-    during his life, and after his death to the said <span class="person" data-person="rachel-judah">Rachel</span>, daughter of said <span class="person" data-person="moses-judah">Moses H. Judah</span>, her heirs & assigns forever.
+    9th/ I give and bequeath to my brother <span class="person" data-person="moses-h-judah">Moses H. Judah</span>, one fourth of the square, which I purchased of <span class="person" data-person="samuel-coleman">Samuel Coleman</span>, beginning on <span class="place" data-place="">M street,
+    at Roper’s or Skipwith’s line</span>, and running on said street one hundred and sixty seven feet, or one half of the front, and including the Dutched roof - house thereon, to have and to hold the same to him the said <span class="person" data-person="moses-h-judah">Moses H. Judah</span>,
+    during his life, and after his death to the said <span class="person" data-person="rachel-judah">Rachel</span>, daughter of said <span class="person" data-person="moses-h-judah">Moses H. Judah</span>, her heirs & assigns forever.
   </p>
   <p>
-    10th/I give and bequeath to my nephew <span class="person" data-person="gershom-judah">Gershom</span> the son of my brother <span class="person" data-person="manuel-judah">Manuel Judah</span>, thirty feet of ground fronting on <span class="place" data-place="">L street</span> on the City
+    10th/I give and bequeath to my nephew <span class="person" data-person="gershom-judah-nephew">Gershom</span> the son of my brother <span class="person" data-person="manuel-judah">Manuel Judah</span>, thirty feet of ground fronting on <span class="place" data-place="">L street</span> on the City
     of Richmond, running back one hundred & twenty four feet and adjoining the fifty feet of ground herein devised in trust for the benefit of <span class="person" data-person="abigail-de-pass">Abigail De Pass</span> for life, to have and to hold the
     same to him - said
     <span class="person" data-person="gershom-judah">Gershom</span> his heirs and assigns forever.
   </p>
   <p>
     11th/ I give and bequeath to my niece <span class="person" data-person="abigail-judah">Abigail Judah</span> ^the daughter of my brother <span class="person" data-person="manuel-judah">Manuel Judah</span> thirty feet of ground, fronting on <span class="place" data-place="">L street</span>
-    in the city of Richmond, running back one hundred and twenty four feet and adjoining the thirty feet herein devised to her brother <span class="person" data-person="gershom-judah">Gershom</span>, to her said <span class="person" data-person="abigail-judah">Abigail Judah</span>    her heirs and assigns forever. Also a negro girl <span class="person" data-person="aggy">Aggy</span> I give & bequeath to my said niece <span class="person" data-person="abigail-judah">Abigail</span> her heirs & assigns forever.
+    in the city of Richmond, running back one hundred and twenty four feet and adjoining the thirty feet herein devised to her brother <span class="person" data-person="gershom-judah-nephew">Gershom</span>, to her said <span class="person" data-person="abigail-judah">Abigail Judah</span>    her heirs and assigns forever. Also a negro girl <span class="person" data-person="aggy">Aggy</span> I give & bequeath to my said niece <span class="person" data-person="abigail-judah">Abigail</span> her heirs & assigns forever.
   </p>
   <p>
     12th/<span class="place" data-place="">The half of the Garden lot</span>, or that part of it which is bounded on the east by the half of the same devised to my executors, in trust to the use & benefit of <span class="person" data-person="abigail-de-pass">Abigail De Pass</span> for life,
@@ -122,7 +123,7 @@
     14th/It is my will & desire that my faithful old slave <span class="person" data-person="toby">Toby</span> shall be maintained & clothed during his life by my executors, at the expense of my estate.
   </p>
   <p>
-    15th/ I give & bequeath to my aunts <span class="person" data-person="grace-nathan">Mrs. Grace Nathan</span> and Mrs. <span class="person" data-person="zipphorah-seixas">Zipporah Seixas</span>, both of the City of New York as having always ~~ retained
+    15th/ I give & bequeath to my aunts <span class="person" data-person="grace-nathan">Mrs. Grace Nathan</span> and Mrs. <span class="person" data-person="zipporah-seixas">Zipporah Seixas</span>, both of the City of New York as having always ~~ retained
     their kindness & care of me, fifty pounds, New York currency, or one hundred & twenty five dollars each, to paid out of my estate within five years, according to the situation of my estate, but if either or both of my said aunts should die before
     the said money is paid them then it is my wish that the sum or sums of money intended for them shall be paid to my heirs.
   </p>
@@ -134,7 +135,7 @@
     my sister <span class="person" data-person="sarah-de-pass">Sarah De Pass</span> one share or portion - to my sister <span class="person" data-person="grace-marks">Grace Marks</span> for her tender regard and love from a child two shares or portions,
     to my sister
     <span class="person" data-person="rebecca-seixas">Rebecca Seixas</span> one share or portion - to my brother <span class="person" data-person="manuel-judah">Manuel Judah</span> one share or portion - to my brother <span class="person" data-person="baruch-h-judah">Baruch H. Judah</span>    & <span class="person" data-person="manuel-judah">Manuel Judah</span> his son, & <span class="person" data-person="ryne-judah">Ryne Judah</span> his daughter, one share or portion to be equally divided between them - to my broth[er] <span class="person"
-      data-person="gershom-judah">Gershom Judah</span> & to my sister <span class="person" data-person="rachel-rehine">Rachel Rehine</span>, one share or portion to be equally divided between them - and the eighth and last portion of the same I give and
+      data-person="gershom-judah-brother">Gershom Judah</span> & to my sister <span class="person" data-person="rachel-rehine">Rachel Rehine</span>, one share or portion to be equally divided between them - and the eighth and last portion of the same I give and
     bequeath to my nephew and namesake <span class="person" data-person="isaac-marks">Isaac Marks</span>, the son of my sister <span class="person" data-person="grace-marks">Grace Marks</span> for him his heirs and assigns forever.
   </p>
   <p>
@@ -149,12 +150,12 @@
   </p>
   <p>
     <span class="person" data-person="isaac-h-judah">I.H.Judah</span><br>
-    <br> Signed Sealed published and<br> declared as his last will & testament<br> by <span class="person" data-person="isaac-h-judah">Isaac H. Judah</span>, before us <br> <span class="person" data-person="herbert-a-clairborne">Herbert A Claiborne</span>
+    <br> Signed Sealed published and<br> declared as his last will & testament<br> by <span class="person" data-person="isaac-h-judah">Isaac H. Judah</span>, before us <br> <span class="person" data-person="herbert-claiborne">Herbert A Claiborne</span>
     <Br> <span class="person" data-person="joseph-longest">Joseph Longest</span><br> <span class="person" data-person="samuel-foster">Samuel Foster</span><br>
     <p>
       At a Court of Hustings held for the city of Richmond, at the City Hall, on the twenty-sixth day of May 1827. <br> This last will and testament of <span class="person" data-person="isaac-h-judah">Isaac H. Judah</span> deceased, was proved by the
       oaths of
-      <span class="person" data-person="herbert-a-clairborne">Herbert A. Clairborne</span>, <span class="person" data-person="joseph-longest">Joseph Longest</span> & <span class="person" data-person="samuel-foster">Samuel Foster</span> witnesses thereto
+      <span class="person" data-person="herbert-claiborne">Herbert A. Clairborne</span>, <span class="person" data-person="joseph-longest">Joseph Longest</span> & <span class="person" data-person="samuel-foster">Samuel Foster</span> witnesses thereto
       and ordered to be recorded and probate granted <span class="person" data-person="david-judah">David Judah</span>, one of the executors therein named, who made oath thereto and entered into & acknowledged a bond in the penalty of twenty thousand
       dollars conditioned according to the Act of Assembly passed the 16th day of February 1825 without security (the will directing that none should be required of them.) liberty being reserved to the other executor in the said will named to join in
       the said probate when he shall think fit.

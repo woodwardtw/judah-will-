@@ -21,6 +21,11 @@ body {
   margin-top: 20px;
 }
 
+#familyTree {
+  width: 100vw;
+  max-width: 1200px;
+}
+
 .plain {
   width: 40%;
   /* margin: auto;*/
@@ -174,6 +179,43 @@ body {
   background-color: peachpuff;
 }
 
+.moses-h-judah {
+  background-color: #24ef24;
+}
+
+.gershom-judah-nephew {
+  background-color: #c7d2ec;
+}
+
+.aggy {
+  background-color: lightgreen;
+}
+
+.toby {
+  background-color: #d2d1d1;
+}
+
+.grace-nathan {
+  background-color: orange;
+}
+
+.zipporah-seixas{
+  background-color: pink;
+}
+
+.references {
+  padding: 10px;
+  border: 1px solid #efefef;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.references p {
+  border-top: 1px solid #efefef;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
@@ -184,7 +226,7 @@ body {
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
-/*Family Tree*/
+/*Family Tree -- now discarded*/
 * {margin: 0; padding: 0;}
 
     .tree ul {
