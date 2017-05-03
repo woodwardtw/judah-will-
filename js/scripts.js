@@ -1,6 +1,4 @@
 
-
-
 const _people = Array.from(document.querySelectorAll('.person'));
 
 //via http://stackoverflow.com/a/4589863/3390935
@@ -55,14 +53,19 @@ function showDetails(person) {
 
 function setPages(theSlug) {
   var thePage = theSlug+'-details';
-  var details = document.getElementsByClassName(thePage)[0].innerHTML;
-  document.getElementById('personDetails').innerHTML = details;
+  if (document.getElementsByClassName(thePage)[0]){
+   var details = document.getElementsByClassName(thePage)[0].innerHTML;
+  }
+  if (document.getElementById('personDetails')){
+    document.getElementById('personDetails').innerHTML = details;
+  }
+  window.location.hash = theSlug;
 }
 
-
 $(document).ready(function() {
+  var def = new jQuery.Deferred();
   $.ajax({
-    url: 'https://rampages.us/judahwill/wp-json/wp/v2/pages?per_page=40',
+    url: 'https://rampages.us/judahwill/wp-json/wp/v2/pages?per_page=90',
     jsonp: "cb",
     dataType: 'json',
     success: function(data) {
@@ -71,8 +74,24 @@ $(document).ready(function() {
           $('#hiddenDetails').append('<div class="person-details hidden '+ item.slug + '-details"><div class="person-name"><h2>' + item.title.rendered + '</h2></div><div class="full-details">' + item.content.rendered + '</div>');
         }); //each
       } //success
-  }); //ajax
+  }); //ajax  
 }); //ready
+
+
+ setTimeout(function(){ urlHash(); }, 1500);
+
+
+function urlHash(){
+  if(window.location.hash) {
+
+      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+      console.log(hash);      
+      setPages(hash);
+      // hash found
+  } else {
+      // No hash found
+  }
+}
 
 
 //discards
