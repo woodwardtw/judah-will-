@@ -49,6 +49,11 @@ body {
   font-size: 2em;
 }
 
+.active {
+  background-color: #fff !important;
+  color: #424242;
+}
+
 #directions-people{
   display: none;
 }

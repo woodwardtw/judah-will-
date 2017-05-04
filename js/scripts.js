@@ -1,6 +1,6 @@
 
 const _people = Array.from(document.querySelectorAll('.person'));
-
+const _buttons = Array.from(document.querySelectorAll('.button'));
 //via http://stackoverflow.com/a/4589863/3390935
 //MAKE THE PEOPLE CLICKABLE
 document.body.onclick = function(e) {
@@ -19,6 +19,7 @@ document.body.onclick = function(e) {
     thePage = e.getAttribute('data-page');
     console.log(thePage);
     setPages(thePage);
+    clearActive(thePage);
   }
 };
 
@@ -68,6 +69,17 @@ function setPages(theSlug) {
 }
 
 
+function clearActive(theSlug,callback){
+  for (var i = 0; i < _buttons.length; i++) {
+      _buttons[i].classList.remove("active");
+    };
+    activePage(theSlug);
+}
+
+function activePage(theSlug){    
+    console.log(document.getElementById(theSlug).className = "button active");
+}
+
 //MAKE ALL OF THE STUFF FROM THE WP JSON API
 $(document).ready(function() {
   var def = new jQuery.Deferred();
@@ -82,8 +94,8 @@ $(document).ready(function() {
         }); //each
         setPages(urlHash());//sets page display if hash in URL
         hlPerson(urlHash());
-        modalFamily();
-
+        urlFix();
+        activePage(urlHash());
       } //success
   }); //ajax  
 }); //ready
@@ -93,7 +105,6 @@ $(document).ready(function() {
 //GET THE HASH VARIABLE FROM URL 
 function urlHash(){
   if(window.location.hash) {
-
       var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
         return hash;
       // hash found
@@ -104,12 +115,16 @@ function urlHash(){
 }
 
 
-//FAMILY TREE MAGIC JUICE
+//FIX RAMPAGES LINKS TO BEHAVE LIKE OTHER LINKS
 
-function modalFamily() {
-  var tree = document.getElementById('familyTree');
-
-  console.log(tree);
+//$( "div.second" ).replaceWith( "<h2>New heading</h2>" );
+function urlFix(){
+ $(function() {
+    var links = $("#hiddenDetails a").map(function() {
+        return this.href;
+    }).get();
+   // console.log(links);
+});
 }
 
 
