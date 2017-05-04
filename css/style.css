@@ -65,6 +65,8 @@ body {
 .extra-info h2 {
   font-size: 3em;
   font-family: 'La Belle Aurore', cursive;
+  line-height: 1em;
+  margin-top: 15px;
 }
 
 .extra-info p {
@@ -82,7 +84,7 @@ body {
 }
 
 .menu {
-  padding: 20px 0 8px 0;
+  padding: 10px 0 8px 0;
   background-color: #424242;
   margin: 0;
   color: #f9f9ef;    
@@ -90,8 +92,8 @@ body {
 
 .site-title {
     font-family: 'La Belle Aurore', cursive;
-    line-height: 1em;
-    font-size: 3em;
+    line-height: .4em;
+    font-size: 2em;
     margin: 0 0 0 30px;
     display: inline-block;
 }

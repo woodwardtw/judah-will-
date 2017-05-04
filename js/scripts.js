@@ -21,6 +21,7 @@ document.body.onclick = function(e) {
     setPages(thePage);
     clearActive(thePage);
   }
+  e.preventDefault();
 };
 
 
@@ -110,7 +111,7 @@ function urlHash(){
       // hash found
   } else {
       // No hash found
-      return 'about';
+      return 'credits';
   }
 }
 
