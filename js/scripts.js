@@ -6,8 +6,8 @@ const _buttons = Array.from(document.querySelectorAll('.button'));
 document.body.onclick = function(e) {
   e = window.event ? event.srcElement : e.target;
   if (e.className && e.className.indexOf("person") != -1) {
-    underPeople();
-  
+    underPeople();    
+
   findPerson = e.dataset.person;
   //console.log(findPerson);
   if (findPerson == hlPerson(findPerson)) {
@@ -77,7 +77,9 @@ function clearActive(theSlug,callback){
 }
 
 function activePage(theSlug){    
+  if (document.getElementById(theSlug)){
     console.log(document.getElementById(theSlug).className = "button active");
+  }
 }
 
 //MAKE ALL OF THE STUFF FROM THE WP JSON API
@@ -94,8 +96,8 @@ $(document).ready(function() {
         }); //each
         setPages(urlHash());//sets page display if hash in URL
         hlPerson(urlHash());
-        urlFix();
         activePage(urlHash());
+        urlFix();
         var cookie = getCookie('shown');
         if (!cookie) {
           $('#directions-people').modal(); // test for cookie and show if not from http://stackoverflow.com/questions/35338454/show-modal-once-per-visit
@@ -137,21 +139,24 @@ function urlHash(){
       // hash found
   } else {
       // No hash found
-      return 'credits';
+      return 'about';
   }
 }
 
 
 //FIX RAMPAGES LINKS TO BEHAVE LIKE OTHER LINKS
 
-//$( "div.second" ).replaceWith( "<h2>New heading</h2>" );
+
 function urlFix(){
- $(function() {
-    var links = $("#hiddenDetails a").map(function() {
-        return this.href;
-    }).get();
-   // console.log(links);
-});
+  var theLinks = document.getElementsByClassName('person');
+  console.log(theLinks);
+  for(var i=0; i<theLinks.length; i++) {
+    if (! theLinks[i].getAttribute('data-person')) {
+      var pageSlug = theLinks[i].href.substring(30);
+      theLinks[i].dataset.person = pageSlug;
+   }
+  }
+
 }
 
 
