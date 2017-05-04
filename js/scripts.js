@@ -21,7 +21,6 @@ document.body.onclick = function(e) {
     setPages(thePage);
     clearActive(thePage);
   }
-  e.preventDefault();
 };
 
 
@@ -97,9 +96,36 @@ $(document).ready(function() {
         hlPerson(urlHash());
         urlFix();
         activePage(urlHash());
+        var cookie = getCookie('shown');
+        if (!cookie) {
+          $('#directions-people').modal(); // test for cookie and show if not from http://stackoverflow.com/questions/35338454/show-modal-once-per-visit
+          console.log(setCookie('shown','visited',30));
+        }  
       } //success
   }); //ajax  
 }); //ready
+
+
+//COOKIE STUFF
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1);
+    if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+  }
+  return "";
+}
+
+
 
 
 

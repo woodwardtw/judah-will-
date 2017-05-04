@@ -26,6 +26,23 @@ body {
   max-width: 1200px;
 }
 
+
+.full-details {
+  margin-bottom: 20px;
+}
+
+.full-details h3 {
+  font-size: 2em;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-family: 'La Belle Aurore', cursive;
+}
+
+.full-details p {
+  margin-bottom: 20px;
+}
+
 .plain {
   width: 40%;
   /* margin: auto;*/
@@ -54,8 +71,12 @@ body {
   color: #424242;
 }
 
-#directions-people{
-  display: none;
+#directions-people{  
+  font-size: 1.4em;
+}
+
+#directions-people p {
+  margin-top: 20px;
 }
 
 .personDetails {
@@ -231,6 +252,15 @@ body {
     border-radius: 4px;
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+#familyTree p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#familyTree a {
+  color: #424242;
 }
 
 /*Family Tree -- now discarded*/
