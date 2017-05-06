@@ -107,6 +107,12 @@ $(document).ready(function() {
   }); //ajax  
 }); //ready
 
+//lets you do the back and forward properly -- I failled on the regular js version 
+$(window).on('hashchange', function() {
+  console.log('fire');
+  setPages(urlHash());
+  activePage(urlHash());
+});
 
 //COOKIE STUFF
 function setCookie(cname, cvalue, exdays) {
@@ -150,10 +156,16 @@ function urlHash(){
 function urlFix(){
   var theLinks = document.getElementsByClassName('person');
   console.log(theLinks);
+  var pageSlug;
   for(var i=0; i<theLinks.length; i++) {
     if (! theLinks[i].getAttribute('data-person')) {
-      var pageSlug = theLinks[i].href.substring(30);
+      if (theLinks[i].href.search("judahwill.rampages")>0){
+         pageSlug = theLinks[i].href.substring(30);
+      } else {
+        pageSlug = theLinks[i].href.substring(36).slice(0, -1);
+      }
       theLinks[i].dataset.person = pageSlug;
+      theLinks[i].setAttribute('href', 'http://judahwill.rampages.us/#' + pageSlug);
    }
   }
 
