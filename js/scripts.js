@@ -107,7 +107,7 @@ $(document).ready(function() {
   }); //ajax  
 }); //ready
 
-//lets you do the back and forward properly -- I failled on the regular js version 
+//lets you do the back and forward properly -- I failed on the regular js version maybe
 $(window).on('hashchange', function() {
   console.log('fire');
   setPages(urlHash());
@@ -170,6 +170,36 @@ function urlFix(){
   }
 
 }
+
+//header shrink on scroll from https://codepen.io/malZiiirA/pen/cbfED
+
+
+$(function(){
+ var shrinkHeader = 100;
+
+//map two elements to scroll http://stackoverflow.com/a/16615769/3390935
+ var $d = $($.map([$(window), $('#theWill')], function(el){return $.makeArray(el)}));
+
+
+  $d.on('scroll',function() {
+    var scroll = getCurrentScroll();
+    console.log(scroll);
+      if ( scroll >= shrinkHeader ) {
+           $('.header, #theWill, .extra-info').addClass('shrink');
+        }
+        else {
+            $('.header, #theWill, .extra-info').removeClass('shrink');
+        }
+  });
+function getCurrentScroll() {
+    var will = $("#theWill").scrollTop(); //get #theWill scroll position 
+    console.log(will);
+
+    return window.pageYOffset || document.documentElement.scrollTop || will;
+    }
+});
+
+
 
 
 //discards
