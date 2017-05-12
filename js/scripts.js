@@ -175,7 +175,7 @@ function urlFix(){
 
 
 $(function(){
- var shrinkHeader = 100;
+ var shrinkHeader = 50;
 
 //map two elements to scroll http://stackoverflow.com/a/16615769/3390935
  var $d = $($.map([$(window), $('#theWill')], function(el){return $.makeArray(el)}));
@@ -187,14 +187,12 @@ $(function(){
       if ( scroll >= shrinkHeader ) {
            $('.header, #theWill, .extra-info').addClass('shrink');
         }
-        else {
+       /* else {
             $('.header, #theWill, .extra-info').removeClass('shrink');
-        }
+        }*/
   });
 function getCurrentScroll() {
     var will = $("#theWill").scrollTop(); //get #theWill scroll position 
-    console.log(will);
-
     return window.pageYOffset || document.documentElement.scrollTop || will;
     }
 });

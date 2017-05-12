@@ -16,9 +16,9 @@ body {
     z-index: 1000;
     height: 200px;
     overflow: hidden;
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    transition: height 0.3s;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     text-align:center;
     line-height:160px;
 
@@ -39,12 +39,12 @@ body {
 }
 
 #theWill.shrink {
-  padding-top: 10px;
+  padding-top: 70px;
 
 }
 
 #theWill span.person {
-  border-bottom: 2px dashed red;
+  border-bottom: 2px dashed #cc5350;
 }
 
 #theWill p {
@@ -122,6 +122,10 @@ body {
   line-height: 1em;
   margin-top: 15px;
   border-bottom: 2px solid #cc5350;
+}
+
+.shrink.extra-info h2 {
+  margin-top: 20px;
 }
 
 .extra-info p {
