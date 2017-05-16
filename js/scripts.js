@@ -20,8 +20,14 @@ document.body.onclick = function(e) {
     console.log(thePage);
     setPages(thePage);
     clearActive(thePage);
+    scrollTop();
   }
 };
+
+//bring to the top of the page for top menu buttoms
+function scrollTop() {
+    window.scrollTo(0, 0);
+}
 
 
 //UNDERLINE THE PEOPLE
@@ -178,14 +184,14 @@ $(function(){
  var shrinkHeader = 50;
 
 //map two elements to scroll http://stackoverflow.com/a/16615769/3390935
- var $d = $($.map([$(window), $('#theWill')], function(el){return $.makeArray(el)}));
+ var $d = $($.map([$(window), $('#theWill')], function(el){return $.makeArray(el)})); //lets you read mouse position off two elements more easily
 
 
   $d.on('scroll',function() {
     var scroll = getCurrentScroll();
     console.log(scroll);
       if ( scroll >= shrinkHeader ) {
-           $('.header, #theWill, .extra-info').addClass('shrink');
+           $('#header, #theWill, .extra-info').addClass('shrink');
         }
        /* else {
             $('.header, #theWill, .extra-info').removeClass('shrink');
